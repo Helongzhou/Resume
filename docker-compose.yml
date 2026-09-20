@@ -1,0 +1,20 @@
+services:
+  portfolio:
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-http://111.229.225.2:3020}
+    image: helong-zhou-portfolio:latest
+    container_name: helong-zhou-portfolio
+    restart: unless-stopped
+    ports:
+      - "${PORT:-3020}:3020"
+    environment:
+      NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-http://111.229.225.2:3020}
+      PORT: 3020
+      HOSTNAME: 0.0.0.0
+      LLM_API_KEY: ${LLM_API_KEY:-}
+      LLM_BASE_URL: ${LLM_BASE_URL:-https://api.deepseek.com}
+      LLM_MODEL: ${LLM_MODEL:-deepseek-chat}
+      AGENT_IP_DAILY_LIMIT: ${AGENT_IP_DAILY_LIMIT:-20}
+      AGENT_GLOBAL_DAILY_LIMIT: ${AGENT_GLOBAL_DAILY_LIMIT:-200}

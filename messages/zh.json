@@ -1,0 +1,129 @@
+{
+  "Meta": {
+    "title": "周何龙 · 全栈开发与前端架构",
+    "description": "周何龙的个人作品集。12 年全栈 / 前端架构实践，覆盖跨境电商、支付、新零售与 AI 工程化交付。",
+    "keywords": "周何龙,全栈开发,前端架构,研发经理,跨境电商,Next.js,作品集"
+  },
+  "Nav": {
+    "about": "关于",
+    "skills": "能力",
+    "work": "作品",
+    "experience": "经历",
+    "ask": "速问",
+    "contact": "联系",
+    "home": "首页",
+    "aiAsk": "AI问答",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单"
+  },
+  "Hero": {
+    "eyebrow": "正在看机会",
+    "headline": "复杂业务，高效上线",
+    "sub": "12 年交付 · 广州 / 深圳",
+    "seekingLabel": "意向岗位",
+    "seeking": ["全栈开发", "前端架构", "研发经理"],
+    "proofs": [
+      "项目全流程 0→1 交付",
+      "跨境电商 / 跨境支付 / 新零售供应链 / 在线教育 / 生活社交",
+      "团队 AI 编程工程化实践"
+    ],
+    "ctaPrimary": "查看作品",
+    "ctaSecondary": "联系",
+    "ctaAsk": "招聘官速问",
+    "scroll": "向下滚动"
+  },
+  "About": {
+    "title": "关于我",
+    "paragraphs": [
+      "我是周何龙，广州 / 深圳，12 年研发。以前端为底座做全栈交付与前端架构：B 端中后台、C 端、跨端、基建与复杂业务系统，擅长 0→1 落地。",
+      "主导过跨境支付、跨境电商、达人营销 SaaS、AI 建站等项目，覆盖前端、后端、数据库与云上线；也能带小队把规范、Review 和关键路径一起兜住。",
+      "近期重点：Next.js + TypeScript + Monorepo + AI Coding，把生成代码放进类型约束、验证与 CI/CD，追求可上线的交付确定性。"
+    ],
+    "focusLabel": "近期重心",
+    "focus": ["Next.js", "AI Coding", "SDD", "Monorepo", "跨境电商", "达人增长"]
+  },
+  "Skills": {
+    "title": "关键词",
+    "subtitle": "招聘官扫一眼即可，细节在作品与经历里。",
+    "keywords": [
+      "React / Next.js / Vue / TypeScript",
+      "前端架构 · Monorepo · 微前端",
+      "Node.js · 微服务 · 数据库",
+      "小程序 · 跨端 · Electron",
+      "CI/CD · Docker · 云部署",
+      "AI Coding · Agent · SDD"
+    ]
+  },
+  "Works": {
+    "title": "精选作品",
+    "subtitle": "先看能上线的东西。",
+    "featured": "代表作",
+    "preview": "预告",
+    "comingSoon": "Coming",
+    "inProgress": "进行中",
+    "viewCase": "查看案例",
+    "visitLive": "访问线上",
+    "more": "了解更多"
+  },
+  "Experience": {
+    "title": "经历",
+    "subtitle": "关键节点，细节在完整时间线。",
+    "viewAll": "完整经历",
+    "pageTitle": "工作经历",
+    "pageSubtitle": "从全栈交付到前端架构与工程化落地。"
+  },
+  "Ask": {
+    "title": "招聘官速问",
+    "subtitle": "行业、独立站、小程序、全栈、AI……点一个问题，打字机直接给你答案；也可以切换到 Agent 演示看工具轨迹。",
+    "tabPreset": "预设速答",
+    "promptLabel": "常见顾虑",
+    "copy": "复制答案",
+    "copied": "已复制",
+    "viewExperience": "查看完整经历"
+  },
+  "Agent": {
+    "tab": "Agent 演示",
+    "subtitle": "透明 Agent：计划 → 工具检索简历 → 生成回答。用于展示 Agent 编排能力。",
+    "quotaLoading": "正在读取今日额度…",
+    "quotaLine": "今日调用：本 IP {ipUsed}/{ipLimit} · 全站 {globalUsed}/{globalLimit}",
+    "quotaExceeded": "今日调用次数已达上限，请明天再试。",
+    "modeLive": "Live · 真实模型",
+    "modeDemo": "Demo · 录制轨迹",
+    "scenarioJd": "示例：JD 匹配",
+    "scenarioCapability": "示例：能力速答",
+    "scenarioProject": "示例：项目深挖",
+    "clear": "清空会话",
+    "empty": "点上方示例，或输入问题开始多轮对话。右侧会展示工具调用轨迹。",
+    "placeholder": "例如：粘贴一段 JD，或追问「那小程序呢？」",
+    "send": "发送",
+    "running": "运行中",
+    "requestFailed": "请求失败，请稍后重试。",
+    "traceTitle": "Agent 轨迹",
+    "traceHint": "招聘官可在此看到工具选择与检索结果。",
+    "traceEmpty": "运行后这里会显示 plan / tool / evidence。"
+  },
+  "Contact": {
+    "title": "联系",
+    "subtitle": "合作、机会或技术交流，欢迎来信。",
+    "openStatus": "广州 / 深圳 · 可远程 · 看全栈开发 / 前端架构 / 研发经理",
+    "email": "邮箱",
+    "copy": "复制邮箱",
+    "copied": "已复制",
+    "github": "GitHub",
+    "location": "所在地"
+  },
+  "Project": {
+    "back": "返回作品",
+    "role": "角色",
+    "period": "周期",
+    "highlights": "亮点",
+    "features": "核心能力",
+    "tech": "技术栈",
+    "live": "线上体验",
+    "previewNote": "项目仍在打磨，线上地址稍后公开。"
+  },
+  "Footer": {
+    "rights": "个人作品集站点",
+    "builtWith": "Built with Next.js"
+  }
+}

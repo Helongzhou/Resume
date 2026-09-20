@@ -1,0 +1,133 @@
+{
+  "Meta": {
+    "title": "Helong Zhou · Full-Stack & Frontend Architecture",
+    "description": "Portfolio of Helong Zhou — 12 years in full-stack and frontend architecture across commerce, payments, retail, and AI engineering.",
+    "keywords": "Helong Zhou,full-stack,frontend architect,engineering manager,cross-border,Next.js,portfolio"
+  },
+  "Nav": {
+    "about": "About",
+    "skills": "Skills",
+    "work": "Work",
+    "experience": "Experience",
+    "ask": "Ask",
+    "contact": "Contact",
+    "home": "Home",
+    "aiAsk": "AI Q&A",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "Hero": {
+    "eyebrow": "Open to opportunities",
+    "headline": "Complex products, shipped efficiently",
+    "sub": "12 years shipping · Guangzhou / Shenzhen",
+    "seekingLabel": "Target roles",
+    "seeking": [
+      "Full-stack",
+      "Frontend Architect",
+      "Eng Manager"
+    ],
+    "proofs": [
+      "End-to-end 0→1 delivery",
+      "Cross-border commerce / payments / retail supply chain / edtech / social",
+      "Team AI coding engineering practice"
+    ],
+    "ctaPrimary": "View work",
+    "ctaSecondary": "Contact",
+    "ctaAsk": "Hiring quick-ask",
+    "scroll": "Scroll"
+  },
+  "About": {
+    "title": "About",
+    "paragraphs": [
+      "I'm Helong Zhou, based in Guangzhou / Shenzhen, with 12 years in R&D. Frontend-grounded full-stack and architecture across admin systems, consumer products, cross-platform apps, infrastructure, and complex business platforms — strong at 0→1 delivery.",
+      "I've led cross-border payments, commerce, creator SaaS, and AI site-building end to end (frontend, backend, data, cloud). I can also lead a small team on standards, review, and the critical path.",
+      "Recent focus: Next.js + TypeScript + Monorepo + AI Coding — putting generated code inside typing, verification, and CI/CD for shippable certainty."
+    ],
+    "focusLabel": "Current focus",
+    "focus": ["Next.js", "AI Coding", "SDD", "Monorepo", "Cross-border commerce", "Creator growth"]
+  },
+  "Skills": {
+    "title": "Keywords",
+    "subtitle": "A quick scan for recruiters — details live in work and experience.",
+    "keywords": [
+      "React / Next.js / Vue / TypeScript",
+      "Frontend architecture · Monorepo · Micro-frontends",
+      "Node.js · Microservices · Databases",
+      "Mini programs · Cross-platform · Electron",
+      "CI/CD · Docker · Cloud deploy",
+      "AI Coding · Agents · SDD"
+    ]
+  },
+  "Works": {
+    "title": "Selected work",
+    "subtitle": "Start with what ships.",
+    "featured": "Featured",
+    "preview": "Preview",
+    "comingSoon": "Coming",
+    "inProgress": "In progress",
+    "viewCase": "Case study",
+    "visitLive": "Live site",
+    "more": "Learn more"
+  },
+  "Experience": {
+    "title": "Experience",
+    "subtitle": "Key chapters — details on the full timeline.",
+    "viewAll": "Full timeline",
+    "pageTitle": "Experience",
+    "pageSubtitle": "From full-stack delivery to frontend architecture and engineering systems."
+  },
+  "Ask": {
+    "title": "Hiring quick-ask",
+    "subtitle": "Industries, storefronts, mini programs, full-stack, AI — pick a preset answer, or switch to the Agent demo to see tool traces.",
+    "tabPreset": "Preset answers",
+    "promptLabel": "Common doubts",
+    "copy": "Copy answer",
+    "copied": "Copied",
+    "viewExperience": "Full timeline"
+  },
+  "Agent": {
+    "tab": "Agent demo",
+    "subtitle": "Transparent agent: plan → retrieve resume evidence → answer. Built to show agent orchestration.",
+    "quotaLoading": "Loading today's quota…",
+    "quotaLine": "Today: this IP {ipUsed}/{ipLimit} · site-wide {globalUsed}/{globalLimit}",
+    "quotaExceeded": "Daily quota reached. Try again tomorrow.",
+    "modeLive": "Live · real model",
+    "modeDemo": "Demo · recorded trace",
+    "scenarioJd": "Sample: JD match",
+    "scenarioCapability": "Sample: capability",
+    "scenarioProject": "Sample: project deep-dive",
+    "clear": "Clear chat",
+    "empty": "Use a sample above, or type to start a multi-turn chat. Tool traces appear on the right.",
+    "placeholder": "Paste a JD, or follow up like “What about mini programs?”",
+    "send": "Send",
+    "running": "Running",
+    "requestFailed": "Request failed. Please try again.",
+    "traceTitle": "Agent trace",
+    "traceHint": "Recruiters can inspect tool choice and retrieved evidence here.",
+    "traceEmpty": "Plan / tool / evidence will show up after a run."
+  },
+  "Contact": {
+    "title": "Contact",
+    "subtitle": "Open to collaboration, opportunities, and technical chats.",
+    "openStatus": "Guangzhou / Shenzhen · remote OK · targeting full-stack / frontend architect / eng manager",
+    "email": "Email",
+    "copy": "Copy email",
+    "copied": "Copied",
+    "github": "GitHub",
+    "location": "Based in"
+  },
+  "Project": {
+    "back": "Back to work",
+    "role": "Role",
+    "period": "Period",
+    "highlights": "Highlights",
+    "features": "Capabilities",
+    "tech": "Stack",
+    "live": "Live demo",
+    "previewNote": "Still polishing — live link coming soon."
+  },
+  "Footer": {
+    "rights": "Personal portfolio",
+    "builtWith": "Built with Next.js"
+  }
+}
