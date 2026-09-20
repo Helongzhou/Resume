@@ -123,8 +123,18 @@
     "highlights": "Highlights",
     "features": "Capabilities",
     "tech": "Stack",
-    "live": "Live demo",
-    "previewNote": "Still polishing — live link coming soon."
+    "live": "Open storefront",
+    "previewNote": "Still polishing — live link coming soon.",
+    "demoCta": "Demo guide",
+    "demoPortals": "Demo portals",
+    "demoAccounts": "Test accounts",
+    "demoRole": "Role",
+    "demoEmail": "Email",
+    "demoPassword": "Password",
+    "demoNote": "Notes",
+    "demoFlows": "Core flows (try in order)",
+    "demoFlowsHint": "Walk buyer → vendor → returns → channel to see the full loop.",
+    "demoArchitecture": "Architecture in one line"
   },
   "Footer": {
     "rights": "Personal portfolio",

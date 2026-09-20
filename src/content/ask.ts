@@ -63,7 +63,7 @@ export const askItems: AskItem[] = [
         zh: "打开 DTC 线上站",
         en: "Open live DTC",
       },
-      href: "http://111.229.225.2:3000/ru",
+      href: "https://dtc.icedew.online",
     },
   },
   {

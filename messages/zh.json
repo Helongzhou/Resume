@@ -119,8 +119,18 @@
     "highlights": "亮点",
     "features": "核心能力",
     "tech": "技术栈",
-    "live": "线上体验",
-    "previewNote": "项目仍在打磨，线上地址稍后公开。"
+    "live": "打开商城",
+    "previewNote": "项目仍在打磨，线上地址稍后公开。",
+    "demoCta": "演示说明",
+    "demoPortals": "演示入口",
+    "demoAccounts": "测试账号",
+    "demoRole": "角色",
+    "demoEmail": "邮箱",
+    "demoPassword": "密码",
+    "demoNote": "说明",
+    "demoFlows": "主线业务（建议按顺序演示）",
+    "demoFlowsHint": "招聘官可按买家 → 卖家 → 退货 → 渠道 走完完整协同闭环。",
+    "demoArchitecture": "一句话架构"
   },
   "Footer": {
     "rights": "个人作品集站点",

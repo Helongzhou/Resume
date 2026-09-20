@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { MotionSection } from "@/components/MotionSection";
+import { ProjectDemoPanel } from "@/components/ProjectDemoPanel";
 import { getProject, projects } from "@/content/projects";
 import { getSiteUrl } from "@/content/site";
 import type { Locale } from "@/i18n/routing";
@@ -101,10 +102,13 @@ export default async function ProjectPage({ params }: Props) {
                 {t("live")} →
               </a>
             ) : (
-              <p className="chip text-muted">
-                {t("previewNote")}
-              </p>
+              <p className="chip text-muted">{t("previewNote")}</p>
             )}
+            {project.demo ? (
+              <a href="#demo" className="btn-secondary">
+                {t("demoCta")}
+              </a>
+            ) : null}
           </div>
         </MotionSection>
 
@@ -143,7 +147,9 @@ export default async function ProjectPage({ params }: Props) {
               </div>
               <div>
                 <dt className="text-muted">{t("period")}</dt>
-                <dd className="mt-1 font-medium">{project.period[typedLocale]}</dd>
+                <dd className="mt-1 font-medium">
+                  {project.period[typedLocale]}
+                </dd>
               </div>
             </dl>
           </MotionSection>
@@ -170,10 +176,7 @@ export default async function ProjectPage({ params }: Props) {
                 </h2>
                 <ul className="mt-4 grid gap-3 sm:grid-cols-2">
                   {project.features[typedLocale].map((item) => (
-                    <li
-                      key={item}
-                      className="surface p-4 text-sm text-muted"
-                    >
+                    <li key={item} className="surface p-4 text-sm text-muted">
                       {item}
                     </li>
                   ))}
@@ -187,10 +190,7 @@ export default async function ProjectPage({ params }: Props) {
               </h2>
               <div className="mt-4 flex flex-wrap gap-2">
                 {project.tech.map((tech) => (
-                  <span
-                    key={tech}
-                    className="chip"
-                  >
+                  <span key={tech} className="chip">
                     {tech}
                   </span>
                 ))}
@@ -198,6 +198,14 @@ export default async function ProjectPage({ params }: Props) {
             </MotionSection>
           </div>
         </div>
+
+        {project.demo ? (
+          <div id="demo">
+            <MotionSection delay={0.06}>
+              <ProjectDemoPanel demo={project.demo} locale={typedLocale} />
+            </MotionSection>
+          </div>
+        ) : null}
       </div>
     </div>
   );
