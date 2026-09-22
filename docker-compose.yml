@@ -3,14 +3,14 @@ services:
     build:
       context: .
       args:
-        NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-http://111.229.225.2:3020}
+        NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-https://zhouhelong.icedew.online}
     image: helong-zhou-portfolio:latest
     container_name: helong-zhou-portfolio
     restart: unless-stopped
     ports:
       - "${PORT:-3020}:3020"
     environment:
-      NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-http://111.229.225.2:3020}
+      NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-https://zhouhelong.icedew.online}
       PORT: 3020
       HOSTNAME: 0.0.0.0
       LLM_API_KEY: ${LLM_API_KEY:-}

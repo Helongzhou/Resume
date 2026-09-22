@@ -21,12 +21,19 @@ npm run dev
 
 ## 部署（腾讯云 CVM + Docker）
 
-已准备 `Dockerfile` / `docker-compose.yml` / `scripts/deploy.sh`。默认对外端口 **3020**（避免与同机 DTC `:3000` 冲突）。
+已准备 `Dockerfile` / `docker-compose.yml` / `scripts/deploy.sh`。默认对外端口 **3020**（避免与同机 DTC `:3000` 冲突）。正式域名：`https://zhouhelong.icedew.online`（Cloudflare 反代到本机 `:3020`）。
 
 ```bash
-DEPLOY_HOST=ubuntu@111.229.225.2 \
+# 方式一：本地私钥文件
+DEPLOY_HOST=root@111.229.225.2 \
 DEPLOY_KEY=~/.ssh/你的私钥 \
-NEXT_PUBLIC_SITE_URL=http://111.229.225.2:3020 \
+NEXT_PUBLIC_SITE_URL=https://zhouhelong.icedew.online \
+bash scripts/deploy.sh
+
+# 方式二：私钥内容注入环境变量（Cloud Agent Secrets）
+DEPLOY_HOST=root@111.229.225.2 \
+DEPLOY_SSH_PRIVATE_KEY="$(cat ~/.ssh/你的私钥)" \
+NEXT_PUBLIC_SITE_URL=https://zhouhelong.icedew.online \
 bash scripts/deploy.sh
 ```
 
