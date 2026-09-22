@@ -1,5 +1,4 @@
 import { getLocale, getTranslations } from "next-intl/server";
-import { Link } from "@/i18n/navigation";
 import { MotionSection } from "@/components/MotionSection";
 import { ParallaxCover } from "@/components/ParallaxCover";
 import { projects } from "@/content/projects";
@@ -49,12 +48,12 @@ export async function WorksSection() {
                 </div>
               </div>
               <div className="flex flex-col justify-end gap-3 md:items-end">
-                <Link
-                  href={`/projects/${featured.slug}`}
+                <a
+                  href={`/${locale}/projects/${featured.slug}`}
                   className="btn-primary w-full md:w-auto"
                 >
                   {t("viewCase")}
-                </Link>
+                </a>
                 {featured.liveUrl ? (
                   <a
                     href={featured.liveUrl}
@@ -73,9 +72,9 @@ export async function WorksSection() {
         <MotionSection className="mt-8" delay={0.1}>
           <div className="surface divide-y divide-line overflow-hidden">
             {previews.map((project) => (
-              <Link
+              <a
                 key={project.slug}
-                href={`/projects/${project.slug}`}
+                href={`/${locale}/projects/${project.slug}`}
                 className="group flex items-center gap-4 px-5 py-4 transition-colors duration-200 hover:bg-bg-soft/60 md:gap-5 md:px-6 md:py-5"
               >
                 <span
@@ -99,7 +98,7 @@ export async function WorksSection() {
                 <span className="hidden translate-x-0 text-sm text-muted transition-all duration-300 group-hover:translate-x-1 group-hover:text-accent sm:inline">
                   {t("more")} →
                 </span>
-              </Link>
+              </a>
             ))}
           </div>
         </MotionSection>

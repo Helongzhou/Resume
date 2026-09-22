@@ -132,10 +132,10 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.45, delay: 0.22, ease }}
             >
-              <a href="#work" className="btn-primary">
+              <a href={`/${locale}#work`} className="btn-primary">
                 {t("ctaPrimary")}
               </a>
-              <a href="#ask" className="link-quiet">
+              <a href={`/${locale}#ask`} className="link-quiet">
                 {t("ctaAsk")}
               </a>
             </motion.div>
@@ -171,7 +171,7 @@ export function HeroSection() {
           >
             <div className="hero-float-glow" aria-hidden />
             <motion.a
-              href="#work"
+              href={`/${locale}#work`}
               className="hero-float-card group relative block overflow-hidden border border-line bg-bg-elevated shadow-[0_30px_80px_-28px_rgba(0,0,0,0.85)]"
               style={{ y: previewY, rotate: previewRotate }}
               whileHover={reduce ? undefined : { y: -6, rotate: -1.5 }}
@@ -219,7 +219,7 @@ export function HeroSection() {
         </div>
         <div className="pointer-events-none absolute inset-0 hidden bg-[linear-gradient(90deg,transparent,rgba(94,228,176,0.08),transparent)] lg:block" />
         <a
-          href="#work"
+          href={`/${locale}#work`}
           className="absolute bottom-5 left-1/2 z-[2] flex -translate-x-1/2 flex-col items-center gap-2 text-[11px] uppercase tracking-[0.2em] text-muted transition-colors hover:text-accent"
         >
           <span>{t("scroll")}</span>

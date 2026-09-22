@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
-import { Link } from "@/i18n/navigation";
 import { MotionSection } from "@/components/MotionSection";
 import { ProjectDemoPanel } from "@/components/ProjectDemoPanel";
 import { getProject, projects } from "@/content/projects";
@@ -68,12 +67,12 @@ export default async function ProjectPage({ params }: Props) {
     <div className="section-pad">
       <div className="container-page">
         <MotionSection>
-          <Link
-            href="/#work"
+          <a
+            href={`/${typedLocale}#work`}
             className="text-sm text-muted transition hover:text-accent"
           >
             ← {t("back")}
-          </Link>
+          </a>
 
           <div className="mt-6 flex flex-wrap items-center gap-3">
             <span className="chip border-accent/25 bg-accent-dim text-accent">
