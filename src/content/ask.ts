@@ -55,8 +55,8 @@ export const askItems: AskItem[] = [
       en: "Yes · live demo",
     },
     answer: {
-      zh: "可以，这也是我当前在交付的核心项目。FBE 跨境多商户独立站基于 MedusaJS + Next.js，覆盖多国家站点、多语言页面与多币种价格；C 端具备浏览搜索、购物车、下单支付与履约，商家侧具备入驻、商品订单管理与佣金结算，并对接 Stripe / PayPal、物流、邮件通知与在线客服。我负责技术规划、全栈落地与 Docker / 云上运维，线上环境可直接体验。如果你关心的是「从需求到可售卖」而不是静态官网，这条链路我完整走过。",
-      en: "Yes — and it's what I'm shipping now. FBE is a multi-vendor cross-border storefront on MedusaJS + Next.js: multi-country sites, localized UX, multi-currency pricing; B2C covers catalog/search, cart, checkout, fulfillment; vendors get onboarding, catalog/order ops, and commission settlement; integrations include Stripe / PayPal, logistics, email, and live chat. I own planning, full-stack delivery, and Docker / cloud ops — the live site is clickable. If you need sellable commerce rather than a static brochure site, I've run that full path.",
+      zh: "可以，这也是我当前在交付的核心项目。FBE 跨境电商商城基于 Shopify（Online Store 2.0 / Markets / Checkout）与 Hydrogen / Liquid，覆盖多国家站点、多语言页面与多币种价格；C 端具备浏览搜索、购物车、下单支付与履约，商家侧具备入驻、商品订单管理与佣金结算，并对接 Shopify Payments / Stripe / PayPal、物流、邮件通知与在线客服。我负责技术规划、全栈落地与 Shopify 托管 + 自定义 App 发布运维，线上环境可直接体验。如果你关心的是「从需求到可售卖」而不是静态官网，这条链路我完整走过。",
+      en: "Yes — and it's what I'm shipping now. FBE is a cross-border commerce platform on Shopify (Online Store 2.0 / Markets / Checkout) with Hydrogen / Liquid: multi-country sites, localized UX, multi-currency pricing; B2C covers catalog/search, cart, checkout, fulfillment; vendors get onboarding, catalog/order ops, and commission settlement; integrations include Shopify Payments / Stripe / PayPal, logistics, email, and live chat. I own planning, full-stack delivery, and Shopify-hosted + custom app release ops — the live site is clickable. If you need sellable commerce rather than a static brochure site, I've run that full path.",
     },
     proof: {
       label: {

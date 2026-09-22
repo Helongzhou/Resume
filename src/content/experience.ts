@@ -31,13 +31,13 @@ export const experiences: ExperienceItem[] = [
     bullets: {
       zh: [
         "TikTok/抖音达人营销增长 SaaS：CRM、建联插件与 AI Agent",
-        "FBE 跨境多商户商城：MedusaJS + Next.js 多端交付与运维",
+        "FBE 跨境电商商城：Shopify + Hydrogen / Liquid 多端交付与运维",
         "企业内部 AI 能力中台：多模型路由、技能配置与用量监控",
         "落地 SDD + Trellis「Plan / Execute / Finish」标准研发流程",
       ],
       en: [
         "Creator growth SaaS for TikTok/Douyin with CRM, plugins, and AI agents",
-        "FBE multi-vendor commerce on MedusaJS + Next.js",
+        "FBE cross-border commerce on Shopify + Hydrogen / Liquid",
         "Internal AI platform with multi-model routing and usage monitoring",
         "SDD + Trellis Plan/Execute/Finish delivery workflow",
       ],

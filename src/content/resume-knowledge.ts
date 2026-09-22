@@ -134,22 +134,22 @@ Engineering: unified stacks, micro-frontends (iframe + postMessage), Electron de
     id: "proj-fbe-detail",
     kind: "project",
     title: {
-      zh: "FBE 跨境多商户独立站（简历详版）",
-      en: "FBE multi-vendor DTC (resume detail)",
+      zh: "FBE 跨境电商商城平台（简历详版）",
+      en: "FBE cross-border commerce platform (resume detail)",
     },
     text: {
       zh: `周期：2026.06–至今。角色：全栈开发 / 技术规划与交付。
 平台能力：C 端购物站 + 商家后台 + 平台运营（佣金、联盟、渠道）；多国家 / 多语言 / 多币种。
-功能：浏览搜索购物车下单支付、物流退货售后、邮件通知、ConnectyCube 客服、Algolia/Meilisearch 搜索。
-技术：MedusaJS/Mercur、Next.js 15 App Router、React 19、Tolgee、Vendor/Channel Vite SPA、Stripe/PayPal、Docker、AWS（ALB/RDS/Redis/Meilisearch）、Gitea Actions、Trellis SDD。
-价值：把购物、通知、客服、发货、结算、推广串成完整跨境链路。`,
+功能：浏览搜索购物车下单支付、物流退货售后、邮件通知、ConnectyCube 客服、Shopify Search / Algolia。
+技术：Shopify（Online Store 2.0 / Markets / Checkout）、Hydrogen / Liquid、TypeScript、Tailwind、Shopify Functions / Extensions、Admin GraphQL / Storefront API、Polaris Embedded App、Stripe/PayPal、Docker、AWS、CI/CD、Trellis SDD。
+价值：基于 Shopify 把购物、通知、客服、发货、结算、推广串成完整跨境链路。`,
       en: `Period: Jun 2026–present. Role: full-stack planning & delivery.
 Capabilities: B2C storefront + vendor admin + platform ops (commission, affiliate, channels); multi-country/locale/currency.
-Features: catalog/search/cart/checkout, fulfillment/returns, email, ConnectyCube chat, Algolia/Meilisearch.
-Stack: MedusaJS/Mercur, Next.js 15 App Router, React 19, Tolgee, Vite vendor/channel SPAs, Stripe/PayPal, Docker, AWS, Gitea Actions, Trellis SDD.
-Value: end-to-end cross-border commerce loop.`,
+Features: catalog/search/cart/checkout, fulfillment/returns, email, ConnectyCube chat, Shopify Search / Algolia.
+Stack: Shopify (Online Store 2.0 / Markets / Checkout), Hydrogen / Liquid, TypeScript, Tailwind, Functions / Extensions, Admin GraphQL / Storefront API, Polaris Embedded Apps, Stripe/PayPal, Docker, AWS, CI/CD, Trellis SDD.
+Value: end-to-end cross-border commerce loop on Shopify.`,
     },
-    tags: ["FBE", "DTC", "MedusaJS", "独立站", "跨境电商"],
+    tags: ["FBE", "DTC", "Shopify", "独立站", "跨境电商"],
   },
   {
     id: "proj-creator-detail",
@@ -315,7 +315,7 @@ Results: 100k+ registered users, ~500k daily messages. Stack: React/Redux, WebSo
     text: {
       zh: `前端：Vue / Nuxt、React / Next.js、TypeScript、Tailwind、微前端、组件库、低代码、可视化编辑器。
 跨端：Taro、uni-app、Flutter、Ionic/Cordova、Electron、微信小程序。
-后端：Node.js、Koa、Egg.js、Express、MedusaJS、Directus、微服务、RabbitMQ、REST。
+后端：Node.js、Koa、Egg.js、Express、Shopify、Directus、微服务、RabbitMQ、REST。
 数据：MySQL、PostgreSQL、MongoDB、Redis、Prisma、Drizzle、Sequelize。
 工程：Monorepo（Turborepo/Yarn）、Zod 强类型、CI/CD、Docker、AWS、腾讯云、阿里云、Cloudflare。
 AI：LLM API、Agent、多模型路由、流式输出、SDD/Trellis/Vibe Coding、Token 成本优化。`,

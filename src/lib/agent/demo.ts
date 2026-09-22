@@ -37,13 +37,13 @@ function buildEvents(locale: Loc, scenario: string): SseEvent[] {
           type: "tool",
           name: "search_projects",
           state: "start",
-          args: { query: "独立站 MedusaJS" },
+          args: { query: "独立站 Shopify" },
         },
         {
           type: "tool",
           name: "search_projects",
           state: "done",
-          result: "FBE 跨境多商户独立站：多语言多币种，Stripe/PayPal，可访问线上",
+          result: "FBE 跨境电商商城：Shopify + Markets，多语言多币种，Stripe/PayPal，可访问线上",
         },
         {
           type: "tool",
@@ -60,7 +60,7 @@ function buildEvents(locale: Loc, scenario: string): SseEvent[] {
         { type: "status", phase: "answering", detail: "汇总引用证据" },
         {
           type: "token",
-          text: "## 匹配结论\n与「全栈 / 电商 / Next.js」方向匹配度高。\n\n### 证据\n- 正在交付 FBE 跨境独立站（MedusaJS + Next.js），链路含支付与商家后台\n- 开时具备跨境支付 0→1 与小程序实战\n- 长期 B 端中后台与前端架构经验，可端到端推进\n\n### 建议\n可优先按全栈 / 前端架构方向推进技术面试；如需管理职责，可补充带队场景追问。\n\n_（当前为演示模式：未配置 LLM_API_KEY 时播放录制轨迹）_",
+          text: "## 匹配结论\n与「全栈 / 电商 / Next.js」方向匹配度高。\n\n### 证据\n- 正在交付 FBE 跨境商城（Shopify + Hydrogen / Liquid），链路含支付与商家后台\n- 开时具备跨境支付 0→1 与小程序实战\n- 长期 B 端中后台与前端架构经验，可端到端推进\n\n### 建议\n可优先按全栈 / 前端架构方向推进技术面试；如需管理职责，可补充带队场景追问。\n\n_（当前为演示模式：未配置 LLM_API_KEY 时播放录制轨迹）_",
         },
         { type: "done" },
       ];
@@ -177,7 +177,7 @@ function buildEvents(locale: Loc, scenario: string): SseEvent[] {
       { type: "status", phase: "answering" },
       {
         type: "token",
-        text: "## Fit summary\nStrong match for full-stack / commerce / Next.js.\n\n### Evidence\n- Shipping FBE multi-vendor storefront (MedusaJS + Next.js)\n- Cross-border payments 0→1 at Ksher\n- Long-running admin / architecture delivery\n\n_(Demo mode: recorded trajectory without LLM_API_KEY)_",
+        text: "## Fit summary\nStrong match for full-stack / commerce / Next.js.\n\n### Evidence\n- Shipping FBE cross-border commerce (Shopify + Hydrogen / Liquid)\n- Cross-border payments 0→1 at Ksher\n- Long-running admin / architecture delivery\n\n_(Demo mode: recorded trajectory without LLM_API_KEY)_",
       },
       { type: "done" },
     ];
