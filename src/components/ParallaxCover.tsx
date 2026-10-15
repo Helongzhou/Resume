@@ -14,6 +14,13 @@ type Props = {
   alt: string;
 };
 
+// Keep both branches of each range the same type, otherwise the ternary widens
+// to `string[] | number[]` and `useTransform` cannot pick an overload.
+const Y_MOVING: string[] = ["-6%", "6%"];
+const Y_STILL: string[] = ["0%", "0%"];
+const SCALE_MOVING: number[] = [1.08, 1, 1.04];
+const SCALE_STILL: number[] = [1, 1, 1];
+
 export function ParallaxCover({ src, alt }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const reduce = useReducedMotion();
@@ -21,11 +28,11 @@ export function ParallaxCover({ src, alt }: Props) {
     target: ref,
     offset: ["start end", "end start"],
   });
-  const y = useTransform(scrollYProgress, [0, 1], reduce ? [0, 0] : ["-6%", "6%"]);
+  const y = useTransform(scrollYProgress, [0, 1], reduce ? Y_STILL : Y_MOVING);
   const scale = useTransform(
     scrollYProgress,
     [0, 0.5, 1],
-    reduce ? [1, 1, 1] : [1.08, 1, 1.04],
+    reduce ? SCALE_STILL : SCALE_MOVING,
   );
 
   return (

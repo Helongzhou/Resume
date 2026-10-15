@@ -3,19 +3,21 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { siteConfig } from "@/content/site";
+import { copyText } from "@/lib/clipboard";
 
 export function CopyEmailButton({ className = "" }: { className?: string }) {
   const t = useTranslations("Contact");
   const [copied, setCopied] = useState(false);
 
   async function onCopy() {
-    try {
-      await navigator.clipboard.writeText(siteConfig.email);
-      setCopied(true);
-      window.setTimeout(() => setCopied(false), 1800);
-    } catch {
+    const ok = await copyText(siteConfig.email);
+    if (!ok) {
+      // Last resort: hand off to the mail client.
       window.location.href = `mailto:${siteConfig.email}`;
+      return;
     }
+    setCopied(true);
+    window.setTimeout(() => setCopied(false), 1800);
   }
 
   return (

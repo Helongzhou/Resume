@@ -1,26 +1,34 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import type { Locale } from "@/i18n/routing";
 import type { ProjectDemo } from "@/content/projects";
+import { copyText, selectElementText } from "@/lib/clipboard";
 
 type Props = {
   demo: ProjectDemo;
   locale: Locale;
 };
 
+type CopyState = "idle" | "done" | "error";
+
 function CopyField({ value, label }: { value: string; label: string }) {
-  const [copied, setCopied] = useState(false);
+  const t = useTranslations("Project");
+  const [state, setState] = useState<CopyState>("idle");
+  const valueRef = useRef<HTMLSpanElement>(null);
 
   async function onCopy() {
-    try {
-      await navigator.clipboard.writeText(value);
-      setCopied(true);
-      window.setTimeout(() => setCopied(false), 1400);
-    } catch {
-      // ignore
+    const ok = await copyText(value);
+    if (ok) {
+      setState("done");
+      window.setTimeout(() => setState("idle"), 1400);
+      return;
     }
+    // Clipboard unavailable: select the value so it can be copied manually.
+    selectElementText(valueRef.current);
+    setState("error");
+    window.setTimeout(() => setState("idle"), 2400);
   }
 
   return (
@@ -28,11 +36,17 @@ function CopyField({ value, label }: { value: string; label: string }) {
       type="button"
       onClick={onCopy}
       className="group inline-flex max-w-full items-center gap-2 font-mono text-sm text-text transition-colors hover:text-accent"
-      title={label}
+      title={state === "error" ? t("copyFailed") : label}
     >
-      <span className="truncate">{value}</span>
-      <span className="shrink-0 text-[11px] text-muted group-hover:text-accent">
-        {copied ? "✓" : "copy"}
+      <span ref={valueRef} className="truncate">
+        {value}
+      </span>
+      <span
+        className={`shrink-0 text-[11px] group-hover:text-accent ${
+          state === "error" ? "text-accent" : "text-muted"
+        }`}
+      >
+        {state === "done" ? "✓" : state === "error" ? t("copyFailedShort") : t("copy")}
       </span>
     </button>
   );

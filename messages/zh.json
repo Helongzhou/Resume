@@ -130,7 +130,10 @@
     "demoNote": "说明",
     "demoFlows": "主线业务（建议按顺序演示）",
     "demoFlowsHint": "招聘官可按买家 → 卖家 → 退货 → 渠道 走完完整协同闭环。",
-    "demoArchitecture": "一句话架构"
+    "demoArchitecture": "一句话架构",
+    "copy": "复制",
+    "copyFailedShort": "已选中",
+    "copyFailed": "自动复制失败，已选中文本，请按 ⌘/Ctrl + C 复制"
   },
   "Footer": {
     "rights": "个人作品集站点",

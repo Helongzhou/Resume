@@ -8,6 +8,7 @@ import { AgentDemo } from "@/components/agent/AgentDemo";
 import { MotionSection } from "@/components/MotionSection";
 import { Typewriter } from "@/components/Typewriter";
 import { askIntro, askItems } from "@/content/ask";
+import { copyText } from "@/lib/clipboard";
 import type { Locale } from "@/i18n/routing";
 
 type Tab = "preset" | "agent";
@@ -57,13 +58,10 @@ export function AskSection() {
 
   const copyAnswer = useCallback(async () => {
     if (!active) return;
-    try {
-      await navigator.clipboard.writeText(active.answer[locale]);
-      setCopied(true);
-      window.setTimeout(() => setCopied(false), 1800);
-    } catch {
-      // ignore
-    }
+    const ok = await copyText(active.answer[locale]);
+    if (!ok) return;
+    setCopied(true);
+    window.setTimeout(() => setCopied(false), 1800);
   }, [active, locale]);
 
   const switchTab = (next: Tab) => {

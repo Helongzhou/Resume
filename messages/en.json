@@ -134,7 +134,10 @@
     "demoNote": "Notes",
     "demoFlows": "Core flows (try in order)",
     "demoFlowsHint": "Walk buyer → vendor → returns → channel to see the full loop.",
-    "demoArchitecture": "Architecture in one line"
+    "demoArchitecture": "Architecture in one line",
+    "copy": "copy",
+    "copyFailedShort": "selected",
+    "copyFailed": "Automatic copy failed — text selected, press ⌘/Ctrl + C to copy"
   },
   "Footer": {
     "rights": "Personal portfolio",
