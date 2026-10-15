@@ -63,7 +63,7 @@ export const askItems: AskItem[] = [
         zh: "打开 DTC 线上站",
         en: "Open live DTC",
       },
-      href: "https://dtc.icedew.online",
+      href: "https://dtc.saaslab.cn",
     },
   },
   {

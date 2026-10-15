@@ -13,7 +13,7 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 DEPLOY_HOST="${DEPLOY_HOST:-root@111.229.225.2}"
 REMOTE_DIR="${REMOTE_DIR:-/opt/portfolio}"
-SITE_URL="${NEXT_PUBLIC_SITE_URL:-https://zhouhelong.icedew.online}"
+SITE_URL="${NEXT_PUBLIC_SITE_URL:-https://zhouhelong.saaslab.cn}"
 PORT="${PORT:-3020}"
 TMP_TGZ="/tmp/portfolio-deploy.tgz"
 TMP_KEY=""

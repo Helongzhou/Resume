@@ -8,12 +8,12 @@ const ORIGIN_IP = "111.229.225.2";
 
 /** @type {Record<string, number>} */
 const PORTS = {
-  "zhouhelong.icedew.online": 80,
+  "zhouhelong.saaslab.cn": 80,
   // Public ports terminate on nginx which rewrites Host → real domain
-  "dtc.icedew.online": 3000,
-  "dtc-vendor.icedew.online": 5174,
-  "dtc-channel.icedew.online": 5276,
-  "dtc-api.icedew.online": 9000,
+  "dtc.saaslab.cn": 3000,
+  "dtc-vendor.saaslab.cn": 5174,
+  "dtc-channel.saaslab.cn": 5276,
+  "dtc-api.saaslab.cn": 9000,
 };
 
 export default {

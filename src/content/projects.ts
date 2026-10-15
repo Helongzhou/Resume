@@ -49,7 +49,7 @@ export const projects: Project[] = [
   {
     slug: "fbe-dtc",
     status: "live",
-    liveUrl: "https://dtc.icedew.online",
+    liveUrl: "https://dtc.saaslab.cn",
     coverGradient:
       "linear-gradient(145deg, #1a2332 0%, #0d3d3a 45%, #1c2a1f 100%)",
     tags: ["Shopify", "Hydrogen", "DTC", "Multi-vendor"],
@@ -139,15 +139,15 @@ export const projects: Project[] = [
       portals: [
         {
           role: { zh: "商城（买家）", en: "Storefront (buyer)" },
-          url: "https://dtc.icedew.online",
+          url: "https://dtc.saaslab.cn",
         },
         {
           role: { zh: "卖家后台", en: "Vendor admin" },
-          url: "https://dtc-vendor.icedew.online",
+          url: "https://dtc-vendor.saaslab.cn",
         },
         {
           role: { zh: "渠道管理", en: "Channel manager" },
-          url: "https://dtc-channel.icedew.online",
+          url: "https://dtc-channel.saaslab.cn",
         },
       ],
       accounts: [
