@@ -9,3 +9,10 @@ node_modules
 AGENTS.md
 CLAUDE.md
 .DS_Store
+
+# AI workflow tooling / local notes — not needed in the image build context
+.trellis
+.claude
+.dsh
+.agents
+interview-prep

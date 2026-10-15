@@ -40,3 +40,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local working notes (interview prep docs, scratch deliverables)
+/interview-prep/
