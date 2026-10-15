@@ -90,3 +90,45 @@ Turned on the real LLM-backed agent on the live site and fixed a deploy script t
 ### Next Steps
 
 - retire the icedew.online vhosts and certs once the new domain has soaked (backup at /opt/portfolio-env.bak.20261015-172807 can be removed then)
+
+
+## Session 3: Sync the resume knowledge base with the latest resume
+<!-- trellis-session: v=2 fp=f05702ca8d8f1409 -->
+
+**Date**: 2026-10-15
+**Task**: Sync the resume knowledge base with the latest resume
+**Branch**: `main`
+
+### Summary
+
+Rebuilt the site knowledge base from the newest resume: merged the current role into Ksher 2023.03-present, dropped the 365 Wisdom entity, and added the resume's new engineering depth.
+
+### Main Changes
+
+- merged current employment into Ksher 2023.03-present and removed the 365 Wisdom entry from experience/ask/demo/knowledge so the public timeline matches the resume
+- FBE: added the eight engineering tracks (cart concurrency, oversell prevention, async load shedding, payment-callback consistency, cache/DB tuning, multi-vendor settlement, multi-country sites, delivery engineering); period corrected to 2026.04-present
+- added the electronic shelf-label IoT platform (MQTT/BLE/OTA) and the Pagoda Flutter app as knowledge docs and as visible project pages
+- expanded the Shengxue ERP doc (customer/sales/traffic/front-office/finance domains) and the Electron IM doc (ordering, batching, offline sync, chunked transfer, auto-update)
+- kept the extras the resume omits (custom FaaS, Ionic app, Egg.js microservices, air-cargo load planning); preserved the health-app backend as an employer-neutral project doc
+- verified every floating date by rendering the PDF pages with the bundled pdfium renderer before editing
+
+### Git Commits
+
+| Hash | Message |
+|------|---------|
+| `3b94527` | feat(content): sync knowledge base with the latest resume |
+
+### Testing
+
+- [OK] tsc --noEmit clean; production build succeeds; no 365 Wisdom references remain
+- [OK] live pages 200 including both new project pages; experience page shows a single 2023.03-present role
+- [OK] live agent answers correctly from the new KB and flags the gaps it does not cover
+
+### Status
+
+[OK] **Completed**
+
+### Next Steps
+
+- the first deploy attempt failed inside the Docker build and the failure was masked by piping output through grep - use set -o pipefail and never filter deploy output
+- retire the icedew.online vhosts and certs once the new domain has soaked
