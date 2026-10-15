@@ -31,7 +31,7 @@ function buildEvents(locale: Loc, scenario: string): SseEvent[] {
           name: "search_experience",
           state: "done",
           result:
-            "开时：跨境收付款 / KYC；叁陆伍：FBE 多商户商城；百果园：新零售中后台",
+            "开时：跨境收付款 / KYC / FBE 多商户商城；百果园：新零售中后台 / 门店价签 IoT",
         },
         {
           type: "tool",
@@ -160,7 +160,7 @@ function buildEvents(locale: Loc, scenario: string): SseEvent[] {
         type: "tool",
         name: "search_experience",
         state: "done",
-        result: "Ksher payments; 365 Wisdom FBE storefront; Pagoda retail admin",
+        result: "Ksher payments + FBE storefront; Pagoda retail admin + shelf-label IoT",
       },
       {
         type: "tool",

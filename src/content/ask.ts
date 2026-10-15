@@ -25,8 +25,8 @@ export const askItems: AskItem[] = [
     },
     linkExperience: true,
     answer: {
-      zh: "行业按时间线覆盖：奇异牛（社交 / 生活服务）→ 升学教育（在线教育：学员 ERP、直播、习题库、IM）→ 百果园（新零售电商与供应链：门店、营销、价签同步）→ 开时（跨境支付：收付款、换汇、KYC）→ 叁陆伍（跨境电商与达人 SaaS）。产品形态上做过独立站、微信小程序 / App、B 端中后台 SaaS、直播学习站、IM 与 Electron 桌面端。技术栈以 Vue / React / Next.js / TypeScript 为前端底座，配合 Node.js 微服务、Monorepo、微前端、Docker / 云部署，以及近年的 AI Coding 工程化。换赛道对我来说主要是对齐业务域模型与合规边界，工程交付能力是可复用的。",
-      en: "Industry timeline: Qiyiniu (social / lifestyle) → Shengxue (online education: student ERP, live classes, question banks, IM) → Pagoda (new-retail commerce & supply chain: stores, campaigns, shelf-label sync) → Ksher (cross-border payments: collect/payout, FX, KYC) → 365 Wisdom (cross-border commerce & creator SaaS). Product forms include storefronts, WeChat mini programs / apps, B-side admin SaaS, live learning sites, IM, and Electron desktop. Stack centers on Vue / React / Next.js / TypeScript, with Node microservices, monorepo, micro-frontends, Docker / cloud, and recent AI Coding engineering. Switching domains is mainly aligning business models and compliance — delivery skills transfer.",
+      zh: "行业按时间线覆盖：奇异牛（社交 / 生活服务）→ 升学教育（在线教育：学员 ERP、直播、习题库、IM）→ 百果园（新零售电商与供应链：门店、营销、价签 IoT 同步、Flutter App）→ 开时（跨境支付、跨境多商户商城与达人营销 SaaS：收付款、换汇、KYC、FBE 商城）。产品形态上做过独立站、微信小程序 / App、B 端中后台 SaaS、直播学习站、IM 与 Electron 桌面端。技术栈以 Vue / React / Next.js / TypeScript 为前端底座，配合 Node.js 微服务、Monorepo、微前端、Docker / 云部署，以及近年的 AI Coding 工程化。换赛道对我来说主要是对齐业务域模型与合规边界，工程交付能力是可复用的。",
+      en: "Industry timeline: Qiyiniu (social / lifestyle) → Shengxue (online education: student ERP, live classes, question banks, IM) → Pagoda (new-retail commerce & supply chain: stores, campaigns, shelf-label IoT sync, Flutter app) → Ksher (cross-border payments, multi-vendor commerce & creator SaaS: collect/payout, FX, KYC, FBE). Product forms include storefronts, WeChat mini programs / apps, B-side admin SaaS, live learning sites, IM, and Electron desktop. Stack centers on Vue / React / Next.js / TypeScript, with Node microservices, monorepo, micro-frontends, Docker / cloud, and recent AI Coding engineering. Switching domains is mainly aligning business models and compliance — delivery skills transfer.",
     },
   },
   {
@@ -92,8 +92,8 @@ export const askItems: AskItem[] = [
       en: "Production AI eng",
     },
     answer: {
-      zh: "我把 AI 当工程系统做，而不是 Demo 调模型。业务侧做过 AI Agent（筛选、话术、邮件生成）、流式输出、多模型路由与 Token 成本监控；研发侧推动 SDD / Vibe Coding，用 Zod 等强类型约束、任务编排、代码验证和 CI/CD 把生成结果卡在可合并、可复用、可上线的质量门槛内。在开时与叁陆伍都落地过「AI 辅助编码 → 可验证协作」的流程，目标是提升吞吐，同时不牺牲类型安全与可维护性。",
-      en: "I treat AI as an engineering system, not a model demo. On the product side: agents (scoring, scripts, email), streaming, multi-model routing, and token-cost monitoring. On the delivery side: SDD / Vibe Coding with strong typing (e.g. Zod), task orchestration, verification, and CI/CD so generated output stays mergeable, reusable, and shippable. At Ksher and 365 Wisdom I've moved teams from ad-hoc AI assistance to verifiable collaboration — higher throughput without giving up type safety or maintainability.",
+      zh: "我把 AI 当工程系统做，而不是 Demo 调模型。业务侧做过 AI Agent（筛选、话术、邮件生成）、流式输出、多模型路由与 Token 成本监控；研发侧推动 SDD / Vibe Coding，用 Zod 等强类型约束、任务编排、代码验证和 CI/CD 把生成结果卡在可合并、可复用、可上线的质量门槛内。在开时科技落地过「AI 辅助编码 → 可验证协作」的流程，目标是提升吞吐，同时不牺牲类型安全与可维护性。",
+      en: "I treat AI as an engineering system, not a model demo. On the product side: agents (scoring, scripts, email), streaming, multi-model routing, and token-cost monitoring. On the delivery side: SDD / Vibe Coding with strong typing (e.g. Zod), task orchestration, verification, and CI/CD so generated output stays mergeable, reusable, and shippable. At Ksher I've moved the team from ad-hoc AI assistance to verifiable collaboration — higher throughput without giving up type safety or maintainability.",
     },
   },
   {

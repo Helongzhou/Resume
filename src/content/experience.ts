@@ -11,66 +11,37 @@ export type ExperienceItem = {
 
 export const experiences: ExperienceItem[] = [
   {
-    id: "sanluwu",
-    company: {
-      zh: "叁陆伍智慧（北京）医疗科技有限公司",
-      en: "365 Wisdom Medical Technology",
-    },
-    role: {
-      zh: "技术经理（全栈架构 · 业务交付 · AI 工程化）",
-      en: "Engineering Manager · Full-stack Architecture & AI Engineering",
-    },
-    period: {
-      zh: "2026.05 — 至今",
-      en: "May 2026 — Present",
-    },
-    summary: {
-      zh: "负责达人营销 SaaS、跨境多商户商城与健康 App 后端等核心产品线的技术规划与交付，并主导团队 AI 研发工程化体系建设。",
-      en: "Owns technical planning and delivery across creator marketing SaaS, cross-border multi-vendor commerce, and health app backends, while building the team's AI engineering system.",
-    },
-    bullets: {
-      zh: [
-        "TikTok/抖音达人营销增长 SaaS：CRM、建联插件与 AI Agent",
-        "FBE 跨境电商商城：Shopify + Hydrogen / Liquid 多端交付与运维",
-        "企业内部 AI 能力中台：多模型路由、技能配置与用量监控",
-        "落地 SDD + Trellis「Plan / Execute / Finish」标准研发流程",
-      ],
-      en: [
-        "Creator growth SaaS for TikTok/Douyin with CRM, plugins, and AI agents",
-        "FBE cross-border commerce on Shopify + Hydrogen / Liquid",
-        "Internal AI platform with multi-model routing and usage monitoring",
-        "SDD + Trellis Plan/Execute/Finish delivery workflow",
-      ],
-    },
-  },
-  {
     id: "ksher",
     company: {
       zh: "深圳开时科技有限公司",
       en: "Ksher (Shenzhen Kaishi Technology)",
     },
     role: {
-      zh: "AI 全栈开发工程师",
-      en: "AI Full-Stack Engineer",
+      zh: "全栈开发高级工程师",
+      en: "Senior Full-Stack Engineer",
     },
     period: {
-      zh: "2023.03 — 2026.04",
-      en: "Mar 2023 — Apr 2026",
+      zh: "2023.03 — 至今",
+      en: "Mar 2023 — Present",
     },
     summary: {
-      zh: "主导跨境支付系统与 AI 建站工具全栈研发，推动团队从 AI 辅助编码升级为可验证的 Vibe Coding 协作模式。",
-      en: "Led full-stack work on cross-border payments and AI site-building tools, evolving the team toward verifiable Vibe Coding collaboration.",
+      zh: "负责跨境支付系统与多条产品线（达人营销 SaaS、跨境多商户商城、Ksher 支付 App、AI 建站）的技术规划与全栈交付，并主导 AI 研发工程化体系建设。",
+      en: "Owns technical planning and full-stack delivery across cross-border payments, creator marketing SaaS, multi-vendor commerce, the Ksher app, and AI site-building — plus the team's AI engineering system.",
     },
     bullets: {
       zh: [
-        "0→1 落地跨境收付款、换汇微服务、营销编辑器等大型项目",
-        "Taro 跨境小程序 + Directus FX / KYC / 多银行对接",
-        "Monorepo + Zod 强类型约束，将 AI 生成纳入工程流水线",
+        "跨境支付 0→1：B2B 商户端、小程序、OM 后台、换汇微服务与 AI 营销编辑器",
+        "达人营销 SaaS：TikTok / 抖音达人 CRM、建联插件与 AI Agent",
+        "FBE 跨境电商商城：Shopify + Hydrogen / Liquid 多端交付与线上稳定",
+        "Ksher 支付 App（Flutter）+ Taro 小程序：Directus FX / KYC / 多银行适配层",
+        "AI 能力中台与工程化：多模型路由、技能配置、用量监控，SDD + Trellis 标准研发流",
       ],
       en: [
-        "Shipped payments, FX microservices, and marketing editors from zero",
-        "Taro mini-program with Directus FX, KYC, and multi-bank adapters",
-        "Monorepo + Zod pipeline to keep AI-generated code verifiable",
+        "Cross-border payments 0→1: B2B merchant portal, mini program, OM admin, FX microservices, AI marketing editor",
+        "Creator growth SaaS for TikTok / Douyin with CRM, outreach plugin, and AI agents",
+        "FBE cross-border commerce on Shopify + Hydrogen / Liquid, including production stability",
+        "Ksher pay app (Flutter) + Taro mini program with Directus FX, KYC, and multi-bank adapters",
+        "Internal AI platform and engineering: multi-model routing, usage monitoring, SDD + Trellis workflow",
       ],
     },
   },

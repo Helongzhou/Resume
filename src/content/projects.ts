@@ -66,21 +66,31 @@ export const projects: Project[] = [
       en: "Full-stack · Architecture & Delivery",
     },
     period: {
-      zh: "2026.06 — 至今",
-      en: "Jun 2026 — Present",
+      zh: "2026.04 — 至今",
+      en: "Apr 2026 — Present",
     },
     highlights: {
       zh: [
-        "负责整体技术规划、研发推进和线上稳定，协调店面、商家后台、渠道系统一起交付",
-        "主导基于 Shopify 的系统架构设计与功能迭代，支撑多国家站点、多语言与多币种展示",
-        "统筹商品、订单、支付、物流、退货、邮件通知、在线客服等核心功能开发",
-        "负责线上问题排查、页面性能优化、海外部署与发布流程建设",
+        "负责整体技术架构规划、核心模块设计与研发交付，协调商城、商家后台、支付与渠道系统协同上线",
+        "主导 Shopify 商城与自定义 App 架构设计，建设多国家站点、多语言、多币种与多商家扩展能力",
+        "负责商品、购物车、订单、库存、支付、物流、退货与商家结算核心链路，优化高并发场景下的数据一致性与吞吐",
+        "购物车并发：乐观 UI 即时反馈 + 失败回滚，防抖节流 / 请求合并 / 操作版本号 + 服务端幂等校验，关键字段服务端二次校验",
+        "库存防超卖：数据库事务 + 悲观锁（SELECT ... FOR UPDATE）与原子条件更新，乐观锁 / CAS 降锁竞争；预占、支付确认、取消与超时释放全流程配幂等键与库存流水",
+        "订单削峰与资金一致：订单创建拆分为独立步骤并消息队列异步化，事务 + 状态机防重复下单；支付回调用幂等键、Webhook 去重与定时对账保证最终一致性",
+        "缓存与数据库治理：主动失效 + 互斥重建 + 随机过期 + 热点预热防击穿；索引、分页与字段投影优化，避免全表扫描与大结果集",
+        "多商家结算：按商家维度拆单、履约与佣金结算，结算批次号 + 唯一业务键 + 流水对账防止重复计算与重复打款",
+        "负责线上性能治理、第三方系统集成、海外部署、故障排查与 CI/CD 发布流程建设",
       ],
       en: [
-        "Owned tech planning, delivery cadence, and production stability across storefront, vendor admin, and channel systems",
-        "Led Shopify-based architecture and iteration for multi-country, multi-language, multi-currency sites",
-        "Coordinated catalog, orders, payments, logistics, returns, email, and live chat delivery",
-        "Handled production triage, page performance, overseas deploy, and release pipelines",
+        "Owned architecture planning, core module design, and delivery across storefront, vendor admin, payments, and channels",
+        "Led Shopify storefront and custom app architecture for multi-country, multi-language, multi-currency, multi-vendor expansion",
+        "Owned catalog, cart, orders, inventory, payments, logistics, returns, and vendor settlement — tuning consistency and throughput under concurrency",
+        "Cart concurrency: optimistic UI with rollback, debounce/coalescing/operation versioning plus server idempotency and re-validation of critical fields",
+        "Oversell prevention: DB transactions with pessimistic locks (SELECT ... FOR UPDATE) and atomic conditional updates, optimistic lock / CAS to cut contention; reservation → payment → cancel → timeout release with idempotency keys and stock ledgers",
+        "Load shedding & money consistency: order creation split into independent steps and offloaded to a message queue; transactions + state machines prevent duplicate orders; payment callbacks use idempotency keys, webhook dedupe, and scheduled reconciliation",
+        "Cache and database governance: active invalidation, mutex rebuild, randomized expiry, and hot-key warmup against stampedes; index, pagination, and projection tuning to avoid full scans",
+        "Multi-vendor settlement: order, fulfillment, and commission split per vendor with batch numbers, unique business keys, and ledger reconciliation against double payouts",
+        "Owned production performance, third-party integrations, overseas deployment, incident triage, and CI/CD release pipelines",
       ],
     },
     tech: [
@@ -361,6 +371,111 @@ export const projects: Project[] = [
       ],
     },
     tech: ["Next.js", "AI Agent", "CRM", "Browser Extension"],
+  },
+  {
+    slug: "pagoda-esl-iot",
+    status: "preview",
+    coverGradient:
+      "linear-gradient(145deg, #10261f 0%, #1d4b3a 50%, #0b1a16 100%)",
+    tags: ["IoT", "MQTT", "BLE", "OTA"],
+    title: {
+      zh: "百果园门店电子价签 IoT 管理系统",
+      en: "Electronic Shelf-Label IoT Platform",
+    },
+    summary: {
+      zh: "面向连锁零售门店的电子价签管理平台：Wi-Fi + MQTT 打通后台与门店基站，BLE 连接手机 App 实现近场改价，上万 SKU 价格毫秒级同步，支持设备状态管理与 OTA 固件升级。",
+      en: "Shelf-label platform for retail stores: Wi-Fi + MQTT links the backend to in-store base stations, BLE connects a phone app for near-field price changes, with millisecond sync across 10k+ SKUs, device-state management, and OTA upgrades.",
+    },
+    role: {
+      zh: "全栈开发",
+      en: "Full-stack",
+    },
+    period: {
+      zh: "2022.04 — 2022.07",
+      en: "Apr 2022 — Jul 2022",
+    },
+    highlights: {
+      zh: [
+        "MQTT 设备通信架构：按门店 / 基站 / 业务类型规划 Topic，商品数据下发、指令路由与执行状态回传，用消息 ID + 超时 + 业务回执做指令追踪",
+        "BLE 蓝牙状态机：扫描、连接、GATT Service/Characteristic 发现、读写、断开与重连抽象为标准状态机，异步队列 + 并发互斥 + 会话标识避免状态冲突",
+        "商品数据一致性：消息 ID + 商品版本号 + 幂等校验 + 重复消息过滤 + 失败补偿，结合执行回执与状态对账提升可追踪性",
+        "OTA 固件升级：分包序号 / 偏移量 / 校验字段 + ACK 确认 + 超时重传 + 发送窗口控制，支持断点续传与异常恢复",
+      ],
+      en: [
+        "MQTT architecture: topics by store / base station / business type with data push, command routing, and execution receipts tracked via message IDs, timeouts, and ACKs",
+        "BLE state machine: scan, connect, GATT service/characteristic discovery, read/write, disconnect, and reconnect as a state machine with async queues, mutual exclusion, and session IDs",
+        "Data consistency: message ID, product version, idempotency checks, duplicate filtering, and failure compensation with receipt reconciliation",
+        "OTA upgrades: packet sequence / offset / checksum with ACK, timeout retransmit, and send-window control, plus resume-from-break recovery",
+      ],
+    },
+    tech: ["MQTT", "BLE", "Wi-Fi", "OTA", "IoT", "Node.js"],
+    features: {
+      zh: [
+        "商品名称、产地、价格、介绍与促销信息统一管理与远程更新",
+        "批量推送：按门店 / 基站批量下发商品与价格变更",
+        "设备状态管理：连接生命周期、在线状态、心跳与断线重连",
+        "手机 App 近场改价：BLE 连接基站直接修改价签",
+        "OTA 固件升级：版本管理、分包传输、完整性校验与失败恢复",
+      ],
+      en: [
+        "Central management and remote update of name, origin, price, description, and promotions",
+        "Batch push of product and price changes per store / base station",
+        "Device state: connection lifecycle, online status, heartbeats, and reconnect",
+        "Near-field price changes from the phone app over BLE",
+        "OTA upgrades: versioning, chunked transfer, integrity checks, and failure recovery",
+      ],
+    },
+  },
+  {
+    slug: "pagoda-app-flutter",
+    status: "preview",
+    coverGradient:
+      "linear-gradient(145deg, #2a1a12 0%, #4a2b1a 50%, #14100c 100%)",
+    tags: ["Flutter", "Commerce", "Group-buy", "Fulfillment"],
+    title: {
+      zh: "百果园 App（Flutter）",
+      en: "Pagoda App (Flutter)",
+    },
+    summary: {
+      zh: "自营水果生鲜 C 端 App：商品下单、团购拼团与次日达履约，支撑多仓多店协同与营销活动快速迭代；Melos monorepo 按业务域拆包，双端体验一致。",
+      en: "Consumer fresh-grocery app covering shopping, group-buy, and next-day fulfillment, supporting multi-warehouse/multi-store coordination and fast campaign iteration on a Melos monorepo.",
+    },
+    role: {
+      zh: "Flutter 开发",
+      en: "Flutter Developer",
+    },
+    period: {
+      zh: "2021.04 — 2022.02",
+      en: "Apr 2021 — Feb 2022",
+    },
+    highlights: {
+      zh: [
+        "Flutter 跨端工程化：Melos monorepo 按业务域拆包（首页 / 商品 / 交易 / 团购 / 履约 / 我的），沉淀 UI Kit、network、analytics 等共享 packages",
+        "交易链路一致性：库存预占倒计时、规格与价格校验；支付结果 Webhook + 主动查单双通道确认，配合本地订单状态机与幂等 Key 规避重复支付",
+        "团购业务引擎：开团 / 参团 / 成团 / 失败回滚状态机，活动库存独立池、成团倒计时与分享回流，关键写操作靠乐观锁与接口幂等保障一致性",
+        "次日达履约：截单时间、配送波次、可配送时段与地址可达性校验，订单节点长连接 / 轮询双模刷新，异常单本地提醒 + 客服入口",
+        "多仓多店适配：定位与 Geofencing 配送围栏自动匹配门店 / 仓，切店后 Repository 层失效缓存并联动刷新可售态、库存、运费与时效",
+        "统一算价编排：商品价 → 活动优惠 → 运费 / 包装费 → 实付，活动规则组件化复用，保证前后端价格一致、可对账",
+      ],
+      en: [
+        "Flutter engineering: Melos monorepo split by domain (home / catalog / trade / group-buy / fulfillment / profile) with shared UI Kit, network, and analytics packages",
+        "Trade consistency: stock reservation countdown, spec and price validation; payment confirmed by webhook plus active polling with a local order state machine and idempotency keys",
+        "Group-buy engine: open / join / success / failure-rollback state machine with dedicated stock pools, countdowns, and share loops; optimistic locks and API idempotency for consistency",
+        "Next-day fulfillment: cut-off times, delivery waves, serviceable slots, and address reachability; order nodes refreshed via long connection or polling with exception alerts",
+        "Multi-warehouse/multi-store: location and Geofencing fences auto-match a store or warehouse; switching stores invalidates repository caches and refreshes availability, stock, shipping, and lead time",
+        "Unified price pipeline: item price → promotions → shipping/packaging → payable with reusable rule components so client and server reconcile",
+      ],
+    },
+    tech: [
+      "Flutter",
+      "Dart",
+      "Melos",
+      "Riverpod",
+      "Bloc",
+      "GoRouter",
+      "Dio",
+      "Fastlane",
+    ],
   },
 ];
 
